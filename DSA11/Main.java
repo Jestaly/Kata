@@ -11,8 +11,8 @@ public class Main {
         //
         int[] array = { 5, 9, 3, 10 };
         int[] tempArray = new int[7];
-        int temp = 0;
-        int num = 4;
+        // int temp = 0;
+        // int num = array.length;
 
         for (int i = 0; i < array.length; i++) {
             tempArray[i] = array[i];
@@ -20,13 +20,13 @@ public class Main {
 
         array = tempArray;
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 0) {
-                temp = array[i];
-                array[i] = num;
-                num = temp;
-            }
-        }
+        // for (int i = 0; i < array.length; i++) {
+        // if (array[i] == 0) {
+        // temp = array[i];
+        // array[i] = num;
+        // num = temp;
+        // }
+        // }
         System.out.println(Arrays.toString(array));
     }
 
