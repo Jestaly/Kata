@@ -14,14 +14,19 @@ public class Main {
                 intFilter = newWord;
                 newWord = "";
                 counter++;
-                for (int j = 0; j < intFilter.length(); j++) {
-                    if (Integer.parseInt(Character.toString(intFilter.charAt(j))) == counter) {
-                        updatedWords = String.join("", updatedWords, intFilter);
-                    }
-                    // else if(){
+                try {
+                    for (int j = 0; j < intFilter.length(); j++) {
+                        if (Integer.parseInt(Character.toString(intFilter.charAt(j))) == counter) {
+                            updatedWords = String.join("", updatedWords, intFilter);
+                        }
+                        // else if(){
 
-                    // }
+                        // }
+                    }
+                } catch (Exception f) {
+                    System.out.println(i);
                 }
+
                 // System.out.println(intFilter);
             }
 
@@ -32,7 +37,7 @@ public class Main {
 
     public static void main(String args[]) {
         String words = "is2 Thi1s T4est 3a";
-        System.out.println(order(words));
-        // order(words);
+        // System.out.println(order(words));
+        order(words);
     }
 }
