@@ -1,11 +1,7 @@
 package DSA3;
 
 public class Main {
-    public static void main(String args[]) {
-
-        averageNumber();
-    }
-
+    // COMPLETED
     public static int averageNumber() {
 
         //
@@ -25,7 +21,6 @@ public class Main {
                 largestNumContainer = largestNum;
             }
         }
-        System.out.println(largestNum);
 
         // FIND THE SMALLEST NUMBER
         for (int i = 0; i < num.length; i++) {
@@ -34,7 +29,6 @@ public class Main {
                 smallestNum = largestNumContainer;
             }
         }
-        System.out.println(smallestNum);
 
         // FIND THE AVERAGE NUMBER
         for (int i = 0; i < num.length; i++) {
@@ -42,8 +36,13 @@ public class Main {
                 averageNum = num[i];
             }
         }
-        System.out.println("AVERAGE NUMBER: " + averageNum);
 
         return averageNum;
+    }
+
+    public static void main(String args[]) {
+
+        System.out.println("AVERAGE NUMBER: " + averageNumber());
+
     }
 }

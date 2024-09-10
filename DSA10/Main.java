@@ -3,8 +3,8 @@ package DSA10;
 import java.util.Arrays;
 
 public class Main {
-
-    public static void moveAllZeros() {
+    // COMPLETED
+    public static String moveAllZeros() {
 
         //
         // MOVE ALL ZEROS TO THE LAST
@@ -25,11 +25,11 @@ public class Main {
             }
 
         }
-        System.out.println(Arrays.toString(array));
+        return Arrays.toString(array);
 
     }
 
     public static void main(String args[]) {
-        moveAllZeros();
+        System.out.println(moveAllZeros());
     }
 }

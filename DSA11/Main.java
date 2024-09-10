@@ -3,8 +3,8 @@ package DSA11;
 import java.util.Arrays;
 
 public class Main {
-
-    public static void resizeArray() {
+    // COMPLETED
+    public static String resizeArray() {
 
         //
         // RESIZING THE ARRAY SIZE
@@ -19,18 +19,10 @@ public class Main {
         }
 
         array = tempArray;
-
-        // for (int i = 0; i < array.length; i++) {
-        // if (array[i] == 0) {
-        // temp = array[i];
-        // array[i] = num;
-        // num = temp;
-        // }
-        // }
-        System.out.println(Arrays.toString(array));
+        return Arrays.toString(array);
     }
 
     public static void main(String args[]) {
-        resizeArray();
+        System.out.println(resizeArray());
     }
 }

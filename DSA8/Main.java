@@ -3,8 +3,8 @@ package DSA8;
 import java.util.Arrays;
 
 public class Main {
-
-    public static void reversedArray() {
+    // COMPLETED
+    public static String reversedArray() {
 
         //
         // REVERSE AN ARRAY
@@ -25,11 +25,11 @@ public class Main {
             arrayOfInt[i] = temp[i];
         }
 
-        System.out.println(Arrays.toString(arrayOfInt));
+        return Arrays.toString(arrayOfInt);
 
     }
 
     public static void main(String args[]) {
-        reversedArray();
+        System.out.println(reversedArray());
     }
 }

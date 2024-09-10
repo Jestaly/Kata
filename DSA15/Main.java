@@ -1,7 +1,7 @@
 package DSA15;
 
 public class Main {
-
+    // COMPLETED
     public static String maskify(String str) {
         String updatedString = "";
         String finalString = "";

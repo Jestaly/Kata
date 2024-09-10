@@ -1,7 +1,7 @@
 
 public class Main {
-
-    public static void sumOfDigitsInInteger() {
+    // COMPLETED
+    public static int sumOfDigitsInInteger() {
 
         //
         // SUM OF DIGITS IN AN INTEGER
@@ -32,13 +32,13 @@ public class Main {
             sum += Integer.parseInt(strTemp[i]);
         }
 
-        System.out.println("SUM OF ALL DIGITS: " + sum);
+        return sum;
 
     }
 
     public static void main(String args[]) {
 
-        sumOfDigitsInInteger();
+        System.out.println("SUM OF ALL DIGITS: " + sumOfDigitsInInteger());
 
     }
 }

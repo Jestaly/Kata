@@ -1,8 +1,8 @@
 package DSA5;
 
 public class Main {
-
-    public static void countVowels() {
+    // COMPLETED
+    public static int countVowels() {
 
         //
         // COUNT THE VOWELS IN A STRING
@@ -17,12 +17,12 @@ public class Main {
                 count++;
             }
         }
-        System.out.println("NUMBER OF VOWELS: " + count);
+        return count;
 
     }
 
     public static void main(String args[]) {
-        countVowels();
+        System.out.println("NUMBER OF VOWELS: " + countVowels());
     }
 
 }

@@ -1,10 +1,7 @@
 package DSA2;
 
 public class Main {
-    public static void main(String args[]) {
-        smallestNumber();
-    }
-
+    // COMPLETED
     public static int smallestNumber() {
 
         //
@@ -31,8 +28,11 @@ public class Main {
             }
         }
 
-        System.out.println("SMALLEST NUMBER: " + smallestNum);
-
         return smallestNum;
     }
+
+    public static void main(String args[]) {
+        System.out.println("SMALLEST NUMBER: " + smallestNumber());
+    }
+
 }

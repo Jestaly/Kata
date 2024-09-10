@@ -1,8 +1,8 @@
 package DSA13;
 
 public class Main {
-
-    public static void checkStringIfPalindrome() {
+    // COMPLETED
+    public static boolean checkStringIfPalindrome() {
 
         //
         // CHECKING IF THE STRING IS A PALINDROME OR NOT
@@ -24,10 +24,10 @@ public class Main {
             }
 
         }
-        System.out.println("STRING IS A " + isPalindrome + " PALINDROME");
+        return isPalindrome;
     }
 
     public static void main(String args[]) {
-        checkStringIfPalindrome();
+        System.out.println("STRING IS A " + checkStringIfPalindrome() + " PALINDROME");
     }
 }

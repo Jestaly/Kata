@@ -1,12 +1,13 @@
 package DSA18;
 
 public class Main {
-
+    // COMPLETED
     static int find(int[] integers) {
 
         //
         // Find The Parity Outlier
         //
+
         int oddCounter = 0;
         int evenCounter = 0;
         int evenStorage = 0;
@@ -32,7 +33,7 @@ public class Main {
     }
 
     public static void main(String args[]) {
-        int[] integers = { 2, 4, 0, 100, 4, 11, 2602, 36 };
+        int[] integers = { Integer.MAX_VALUE, 0, 1 };
 
         System.out.println(find(integers));
     }

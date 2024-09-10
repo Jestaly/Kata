@@ -1,8 +1,8 @@
 package DSA6;
 
 public class Main {
-
-    public static void countWords() {
+    // COMPLETED
+    public static int countWords() {
 
         //
         // COUNT THE WORDS IN A STRING
@@ -18,12 +18,12 @@ public class Main {
                 count++;
             }
         }
-        System.out.println("NUMBER OF WORDS: " + (count + 1));
+        return count;
 
     }
 
     public static void main(String args[]) {
-        countWords();
+        System.out.println("NUMBER OF WORDS: " + (countWords() + 1));
     }
 
 }

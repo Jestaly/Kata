@@ -3,8 +3,8 @@ package DSA17;
 import java.util.Arrays;
 
 public class Main {
-
-    public static int[] arrayDiff(int[] a, int[] b) {
+    // COMPLETED
+    public static String arrayDiff(int[] a, int[] b) {
 
         int temp = 0;
         int counter = 0;
@@ -24,14 +24,13 @@ public class Main {
 
         a = tempArray;
 
-        System.out.println(Arrays.toString(tempArray));
-        return a;
+        return Arrays.toString(a);
     }
 
     public static void main(String args[]) {
         int[] a = { 1, 2, 2, 2, 3 };
         int[] b = { 2 };
 
-        arrayDiff(a, b);
+        System.out.println(arrayDiff(a, b));
     }
 }

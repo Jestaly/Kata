@@ -1,8 +1,8 @@
 package DSA12;
 
 public class Main {
-
-    public static void findMissingNumber() {
+    // COMPLETED
+    public static int findMissingNumber() {
 
         //
         // FINDING THE MISSING NUMBER IN AN ARRAY
@@ -22,11 +22,11 @@ public class Main {
             }
 
         }
-        System.out.println("MISSING NUMBER: " + (counter + 1));
+        return counter;
 
     }
 
     public static void main(String args[]) {
-        findMissingNumber();
+        System.out.println("MISSING NUMBER: " + (findMissingNumber() + 1));
     }
 }

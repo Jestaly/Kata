@@ -3,6 +3,7 @@ package DSA16;
 import java.util.*;
 
 public class Main {
+    // COMPLETED
     public static void main(String args[]) {
         LinkedList<Integer> lList = new LinkedList<Integer>();
 

@@ -1,8 +1,8 @@
 package DSA9;
 
 public class Main {
-
-    public static void findSecondMaxDigit() {
+    // COMPLETED
+    public static int findSecondMaxDigit() {
 
         //
         // FINDING THE SECOND MAXIMUM DIGIT IN AN ARRAY
@@ -41,11 +41,11 @@ public class Main {
             }
         }
 
-        System.out.println("SECOND LARGEST NUMBER: " + secLargestNum);
+        return secLargestNum;
 
     }
 
     public static void main(String args[]) {
-        findSecondMaxDigit();
+        System.out.println("SECOND LARGEST NUMBER: " + findSecondMaxDigit());
     }
 }
