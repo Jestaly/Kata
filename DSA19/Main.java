@@ -3,7 +3,7 @@ package DSA19;
 public class Main {
     // NOT DONE YET
     public static String order(String words) {
- 
+
         int counter = 0;
         String intFilter = "";
         String newWord = "";
@@ -30,7 +30,6 @@ public class Main {
 
                 // System.out.println(intFilter);
             }
-
         }
         return updatedWords;
     }
