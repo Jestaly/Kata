@@ -3,37 +3,36 @@ package DSA19;
 public class Main2 {
 
     public static String order(String words) {
-        int counter = 1;
+        int numCounter = 1;
+        int counter = 0;
         String indivWord = "";
         String updatedWord = "";
-        for (int i = 0; i < words.length(); i++) {
+        while (counter < words.length()) {
 
-            indivWord = String.join("", indivWord, Character.toString(words.charAt(i)));
-            if (words.charAt(i) == ' ') {
+            indivWord += Character.toString(words.charAt(counter));
+            if (words.charAt(counter) == ' ') {
 
-                if (indivWord.contains(Integer.toString(counter))) {
-                    updatedWord = String.join("", updatedWord, indivWord);
-                    System.out.println(updatedWord);
-                    i = 0;
-                    counter++;
+                if (indivWord.contains(Integer.toString(numCounter))) {
+                    updatedWord += indivWord;
+                    numCounter++;
+                    // if (counter == words.length() - 1) {
+                    // counter = 0;
+                    // }
+                    indivWord = "";
                 } else {
                     indivWord = "";
                 }
 
             }
-            // if (words.charAt(i) == counter && words.charAt(i) == ' ') {
-            // counter++;
-            // }
-            // if (words.charAt(i) == ' ' && counter == 1) {
+            counter++;
 
-            // }
         }
         return updatedWord;
 
     }
 
     public static void main(String args[]) {
-        String words = "is2 Thi1s T4est 3a";
+        String words = "3a Thi1s is2 T4est ";
         System.out.println(order(words));
     }
 }
