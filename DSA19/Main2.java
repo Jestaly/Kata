@@ -18,7 +18,6 @@ public class Main2 {
         while (counter < words.length()) {
             if (counter == words.length() - 1) {
                 if (space == numCounter) {
-
                     break;
                 }
                 counter = 0;
