@@ -8,38 +8,37 @@ public class Main2 {
         int counter = 0;
         String indivWord = "";
         String updatedWord = "";
-
+        int space = 0;
         words = " " + words + " ";
-
+        for (int i = 0; i < words.length(); i++) {
+            if (words.charAt(i) == ' ') {
+                space++;
+            }
+        }
         while (counter < words.length()) {
             if (counter == words.length() - 1) {
-                if (updatedWord.contains("6")) {
-                    System.out.println("break");
+                if (space == numCounter) {
+
                     break;
                 }
                 counter = 0;
             }
             indivWord += Character.toString(words.charAt(counter));
             if (words.charAt(counter) == ' ') {
+
                 if (indivWord.contains(Integer.toString(numCounter))) {
                     updatedWord += indivWord;
                     numCounter++;
                     indivWord = "";
-                    // if (updatedWord.length() == words.length()) {
-                    // System.out.println("break");
-                    // break;
-                    // }
-
                 } else {
                     indivWord = "";
                 }
-
             }
             counter++;
-
         }
+
         words = updatedWord;
-        return words;
+        return words.trim();
 
     }
 
