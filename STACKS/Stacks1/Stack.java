@@ -9,14 +9,22 @@ public class Stack {
 
     private int[] stackArray;
     private int counter = 0;
+    private int size;
 
     public Stack(int size) {
         stackArray = new int[size];
+        this.size = size;
     }
 
     public void push(int n) {
-        stackArray[counter] = n;
-        counter++;
+
+        if (counter == size) {
+            System.out.println("Stack is full.");
+        } else {
+            stackArray[counter] = n;
+            counter++;
+        }
+
     }
 
     public void pop() {
