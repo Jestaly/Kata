@@ -16,5 +16,14 @@ public class Main {
         third.next = fourth;
         fourth.next = fifth;
 
+        sll.current = sll.head;
+        while (sll.current != null) {
+            System.out.print(sll.current.data + " --> ");
+            sll.current = sll.current.next;
+        }
+        if (sll.current == null) {
+            System.out.println("null");
+        }
+
     }
 }

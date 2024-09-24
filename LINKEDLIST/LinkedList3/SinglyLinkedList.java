@@ -2,6 +2,7 @@ package LINKEDLIST.LinkedList3;
 
 public class SinglyLinkedList {
     public ListNode head;
+    public ListNode current;
 
     public class ListNode {
         public int data;
