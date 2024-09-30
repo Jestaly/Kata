@@ -15,11 +15,11 @@ public class Main {
         second.next = third;
         third.next = fourth;
 
-        sll.current = sll.head;
-        while (sll.current != null) {
-            System.out.println(sll.current.data);
-            sll.current = sll.current.next;
-        }
+        // sll.current = sll.head;
+        // while (sll.current != null) {
+        // System.out.println(sll.current.data);
+        // sll.current = sll.current.next;
+        // }
         System.out.println("null");
     }
 }
