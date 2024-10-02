@@ -17,6 +17,5 @@ public class Main {
         System.out.println(stack.isEmpty());
         // Write a Java program to implement a stack with push and pop operations. Find
         // the top element of the stack and check if it is empty or not.
-
     }
 }
