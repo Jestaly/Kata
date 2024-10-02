@@ -7,8 +7,6 @@ public class test {
         Scanner scanner = new Scanner(System.in);
         String num = scanner.next();
 
-        System.out.println(num.toCharArray());
-
         // int intNum = Integer.parseInt(num);
         // System.out.println(intNum);
         // if (intNum == -99) {
