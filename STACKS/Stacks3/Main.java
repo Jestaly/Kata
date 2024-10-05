@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String args[]) {
+        // REVERSING STRING USING STACK
         String str = "hello";
         String strRev = "";
         Stack<Character> stack = new Stack<Character>();
