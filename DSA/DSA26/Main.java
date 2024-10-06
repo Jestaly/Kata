@@ -4,8 +4,8 @@ public class Main {
     public static void main(String args[]) {
         Solution solution = new Solution();
 
-        String s = "ab";
-        String t = "a";
+        String s = "aacc";
+        String t = "ccac";
 
         System.out.println(solution.isAnagram(s, t));
     }
