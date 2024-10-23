@@ -23,7 +23,7 @@ public class Main {
         System.out.println(main.head.data);
         System.out.println(main.head.next.data);
         System.out.println(main.head.next.next.data);
-        System.out.println(main.head.next.next.next.data);
+        System.out.println(main.head.next.next.next);
 
     }
 }
