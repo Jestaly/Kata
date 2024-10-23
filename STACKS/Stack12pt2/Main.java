@@ -6,7 +6,7 @@ public class Main {
     public static void main(String args[]) {
         Stack<Character> stack = new Stack<>();
 
-        String str = "A*B*C";
+        String str = "A+B*C";
         String strTemp = "";
         char opTemp = ' ';
         for (int i = 0; i < str.length(); i++) {
@@ -21,6 +21,10 @@ public class Main {
                     str.charAt(i) == '(' || str.charAt(i) == ')') {
                 if (stack.isEmpty()) {
                     opTemp = str.charAt(i);
+                    stack.push(str.charAt(i));
+                    continue;
+                }
+                if (stack.peek() == '(') {
                     stack.push(str.charAt(i));
                     continue;
                 }
@@ -41,13 +45,13 @@ public class Main {
                     continue;
                 }
                 if ((str.charAt(i) == '*' || str.charAt(i) == '/') &&
-                        (opTemp == '+' || opTemp == '-')) {
+                        (stack.peek() == '+' || stack.peek() == '-')) {
                     opTemp = str.charAt(i);
                     stack.push(str.charAt(i));
                     continue;
                 }
                 if ((str.charAt(i) == '+' || str.charAt(i) == '-') &&
-                        (opTemp == '*' || opTemp == '/')) {
+                        (stack.peek() == '*' || stack.peek() == '/')) {
                     opTemp = str.charAt(i);
                     strTemp += stack.pop();
                     stack.push(str.charAt(i));
