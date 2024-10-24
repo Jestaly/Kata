@@ -43,9 +43,7 @@ public class Main {
     void offerFirst(String s) {
         Node newNode = new Node(s);
         newNode.next = head;
-        System.out.println(head.next.data);
         head = newNode;
-        System.out.println(head.next.data);
     }
 
     public static void main(String args[]) {
