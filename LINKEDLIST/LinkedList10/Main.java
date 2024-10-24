@@ -47,6 +47,11 @@ public class Main {
             curr = curr.next;
             count++;
         }
+
+        // newNode.next = curr.next;
+        // curr.next = newNode;
+
+        // MY CURRENT VERSION
         Node prev = curr;
         while (curr.next != null) {
             prev = curr.next;
@@ -77,9 +82,10 @@ public class Main {
         main.add(5);
         main.add(5);
 
-        main.insert(9, 100);
         main.insert(10, 99);
-
+        main.insert(9, 100);
+        main.insert(5, 23);
+        main.insert(1, 67);
         main.printList(main.head);
     }
 }
