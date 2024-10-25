@@ -40,7 +40,7 @@ public class Main {
 
     String getFirst() {
         if (head == null) {
-            System.out.println("head has no value.");
+            return "Null";
         }
         return head.data;
     }
