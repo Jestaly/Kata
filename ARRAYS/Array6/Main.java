@@ -1,4 +1,4 @@
-package DSA.DSA10;
+package ARRAYS.Array6;
 
 import java.util.Arrays;
 

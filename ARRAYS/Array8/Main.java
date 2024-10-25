@@ -1,4 +1,4 @@
-package DSA.DSA12;
+package ARRAYS.Array8;
 
 public class Main {
     // COMPLETED

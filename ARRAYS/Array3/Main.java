@@ -1,4 +1,4 @@
-package DSA.DSA3;
+package ARRAYS.Array3;
 
 public class Main {
     // COMPLETED

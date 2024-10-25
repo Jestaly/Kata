@@ -1,4 +1,4 @@
-package DSA.DSA23;
+package ARRAYS.Array10;
 
 public class Main {
     public static void main(String args[]) {
