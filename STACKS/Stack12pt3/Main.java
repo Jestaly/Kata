@@ -46,8 +46,7 @@ public class Main {
                         (stack.peek() == '+' || stack.peek() == '-')) {
                     stack.push(str.charAt(i));
                     continue;
-                }
-                if ((str.charAt(i) == '+' || str.charAt(i) == '-') &&
+                } else if ((str.charAt(i) == '+' || str.charAt(i) == '-') &&
                         (stack.peek() == '*' || stack.peek() == '/')) {
                     strTemp += stack.pop();
                     stack.push(str.charAt(i));
