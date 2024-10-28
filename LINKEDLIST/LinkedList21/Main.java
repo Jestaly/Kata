@@ -10,6 +10,7 @@ public class Main {
         Node_1 tempNode = node1.head;
         while (tempNode.next != null) {
             tempNode = tempNode.next;
+
         }
         Node_2 headNode = node2.head;
         node1.connectTo(headNode);
