@@ -6,7 +6,7 @@ public class Main {
     public static void main(String args[]) {
         Stack<Character> stack = new Stack<>();
         // INFIX TO POSTFIX
-        String str = "A+B*C";
+        String str = "A+B*C-D";
         String strTemp = "";
         for (int i = 0; i < str.length(); i++) {
             if (!(str.charAt(i) == '*' || str.charAt(i) == '/' ||
