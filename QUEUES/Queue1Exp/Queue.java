@@ -1,6 +1,8 @@
 package QUEUES.Queue1Exp;
 
 public class Queue {
+    int size = 5;
+    int sizeCounter = -1;
     Node head;
 
     Queue() {
@@ -18,8 +20,14 @@ public class Queue {
     }
 
     void enqueue(String val) {
+
         Node newNode = new Node(val);
 
+        if (sizeCounter == size) {
+            System.out.println("Queue is full!");
+
+            return;
+        }
         if (head == null) {
             head = newNode;
             return;
@@ -29,6 +37,9 @@ public class Queue {
             tempNode = tempNode.next;
         }
         tempNode.next = newNode;
+        sizeCounter++;
+        System.out.println(sizeCounter);
+
     }
 
     void dequeue() {
@@ -48,26 +59,48 @@ public class Queue {
     }
 
     void peek() {
+        if (head == null) {
+            System.out.println("Null");
+            return;
+        }
         System.out.println(head.val);
+    }
+
+    // void
+    boolean isEmpty() {
+        if (head == null) {
+            return true;
+        }
+        return false;
+    }
+
+    boolean isFull() {
+        int counter = 0;
+        Node tempNode = head;
+
+        while (tempNode.next != null) {
+            tempNode = tempNode.next;
+            counter++;
+        }
+        if (counter < size - 1) {
+            return false;
+        }
+        return true;
     }
 
     public static void main(String[] args) {
         Queue queue = new Queue();
-
         queue.enqueue("Black");
         queue.enqueue("Green");
         queue.enqueue("Red");
         queue.enqueue("White");
+        // queue.enqueue("Blue");
 
         queue.dequeue();
-        // queue.dequeue();
-        // queue.dequeue();
-
-        queue.peek();
+        // System.out.println(queue.isEmpty());
+        // System.out.println(queue.isFull());
 
         queue.display(queue.head);
-
         System.out.println("Null");
-
     }
 }
