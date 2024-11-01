@@ -4,31 +4,91 @@ import java.util.Arrays;
 
 public class Main {
     static int removeElement(int[] nums, int val) {
-        int pointer = nums.length - 1;
-        int temp = 0;
+
+        int right = nums.length - 1;
         int k = 0;
+        int removeCount = 0;
+
         for (int i = 0; i < nums.length; i++) {
-
-            if (nums[i] == nums[pointer]) {
-                pointer--;
-            }
             if (nums[i] == val) {
-                temp = nums[i];
-                nums[i] = nums[pointer];
-                nums[pointer] = temp;
-                pointer--;
-                k++;
-
+                removeCount++;
             }
+        }
+        if (removeCount == nums.length) {
+            return k;
+        }
+        for (int left = 0; left < nums.length; left++) {
+
+            if (nums.length == 0) {
+                return k = 0;
+            }
+            if (left == right) {
+                break;
+            }
+            for (int j = left; j < nums.length; j++) {
+                if (nums[left] == nums[right] && nums[left] == val) {
+                    right--;
+                    continue;
+                }
+                if (nums[left] == val) {
+                    int temp = nums[left];
+                    nums[left] = nums[right];
+                    nums[right] = temp;
+                    right--;
+                    break;
+                }
+            }
+            if (nums[left] != nums[right] && nums[left] == val) {
+                break;
+            }
+            // System.out.println(Arrays.toString(nums));
+            // System.out.println(left);
+            // System.out.println(right);
+            if (left == right) {
+                break;
+            }
+        }
+        int i = 0;
+        while (nums[i] != val) {
+            k++;
+            if (i == nums.length - 1) {
+                return k;
+            }
+            i++;
         }
         System.out.println(Arrays.toString(nums));
         return k;
-
     }
 
     public static void main(String[] args) {
-        int[] nums = { 3, 2, 2, 3 };
-        int val = 3;
+        int[] nums = { 0, 4, 4, 0, 4, 4, 4, 0, 2 };
+        int val = 4;
         System.out.println(removeElement(nums, val));
+
+        // if (nums.length == 0) {
+        // return k;
+        // }
+        // if (nums[0] != val && nums.length <= 1) {
+        // k++;
+        // // System.out.println(Arrays.toString(nums));
+        // return k;
+        // }
+        // if (nums[0] == val && nums.length <= 1) {
+        // // System.out.println(Arrays.toString(nums));
+        // return k;
+        // }
+
+        // int numsRemove = 0;
+        // for (int i = 0; i < nums.length; i++) {
+        // if (nums[i] == val) {
+        // numsRemove++;
+        // } else {
+        // k++;
+        // }
+        // }
+        // if (numsRemove == nums.length) {
+        // return k = 0;
+
+        // }
     }
 }
