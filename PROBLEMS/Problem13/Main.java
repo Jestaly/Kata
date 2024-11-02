@@ -64,31 +64,5 @@ public class Main {
         int[] nums = { 0, 4, 4, 0, 4, 4, 4, 0, 2 };
         int val = 4;
         System.out.println(removeElement(nums, val));
-
-        // if (nums.length == 0) {
-        // return k;
-        // }
-        // if (nums[0] != val && nums.length <= 1) {
-        // k++;
-        // // System.out.println(Arrays.toString(nums));
-        // return k;
-        // }
-        // if (nums[0] == val && nums.length <= 1) {
-        // // System.out.println(Arrays.toString(nums));
-        // return k;
-        // }
-
-        // int numsRemove = 0;
-        // for (int i = 0; i < nums.length; i++) {
-        // if (nums[i] == val) {
-        // numsRemove++;
-        // } else {
-        // k++;
-        // }
-        // }
-        // if (numsRemove == nums.length) {
-        // return k = 0;
-
-        // }
     }
 }
