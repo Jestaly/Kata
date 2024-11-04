@@ -41,9 +41,9 @@ public class Main {
             if (nums[left] != nums[right] && nums[left] == val) {
                 break;
             }
-            // if (left == right) {
-            // break;
-            // }
+            if (left == right) {
+                break;
+            }
 
         }
         int i = 0;
