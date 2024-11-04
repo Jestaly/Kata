@@ -5,7 +5,6 @@ import java.util.Stack;
 public class Main {
     static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
-
         for (int i = 0; i < s.length(); i++) {
             try {
                 if (s.charAt(i) == ')' && stack.peek() == '(') {
