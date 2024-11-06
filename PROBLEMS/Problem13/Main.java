@@ -22,9 +22,11 @@ public class Main {
             if (nums.length == 0) {
                 return k = 0;
             }
-            for (int j = 0; j < nums.length; j++) {
+            for (int j = left; j < nums.length; j++) {
                 if (nums[left] == nums[right] && nums[left] == val) {
                     right--;
+                    System.out.println(left);
+                    System.out.println(right);
                     break;
                 }
                 if (nums[left] == val) {
@@ -34,6 +36,7 @@ public class Main {
                     right--;
                     break;
                 }
+
             }
             System.out.println(Arrays.toString(nums));
             System.out.println(left);
@@ -42,9 +45,9 @@ public class Main {
                 break;
             }
             if (left == right) {
+                System.out.println("executed");
                 break;
             }
-
         }
         int i = 0;
         while (nums[i] != val) {
@@ -59,7 +62,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // int[] nums = { 4, 5, 5, 5 };
+        // int[] nums = { 0, 1, 2, 2, 3, 0, 4, 2 };
         int[] nums = { 0, 4, 4, 0, 4, 4, 4, 0, 2 };
         int val = 4;
         System.out.println(removeElement(nums, val));
