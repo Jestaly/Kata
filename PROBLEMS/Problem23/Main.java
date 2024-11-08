@@ -1,11 +1,13 @@
 package PROBLEMS.Problem23;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void bookStore() {
         Scanner in = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+
         int amount = 0;
         do {
             try {
