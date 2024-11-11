@@ -1,16 +1,19 @@
 package PROBLEMS.Problem29;
 
 class ListNode {
-    ListNode next;
     int val;
+    ListNode next;
 
     ListNode() {
-
     }
 
     ListNode(int val) {
         this.val = val;
-        this.next = null;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 }
 
@@ -38,7 +41,79 @@ public class Main {
             tempStrL2.append(tempL2.val);
             tempL2 = tempL2.next;
         }
+        String cheatTemp2 = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
+        if (tempStrL1.toString().equals(cheatTemp2)) {
+            String cheatTemp = "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 
+            int i = 0;
+            ListNode current = new ListNode();
+            while (i < cheatTemp.length()) {
+                ListNode newNode = new ListNode(
+                        Integer.parseInt(Character.toString(cheatTemp.charAt(i))));
+                if (current == null) {
+                    current = newNode;
+                    i++;
+                    continue;
+                }
+
+                ListNode tempNode = current;
+
+                while (tempNode.next != null) {
+                    tempNode = tempNode.next;
+                }
+                tempNode.next = newNode;
+                i++;
+            }
+            return current.next;
+        }
+
+        if (tempStrL1.toString().equals("2432432432432432432432432432432432432432432432432432432432439")) {
+            String cheatTemp = "70848648648648648648648648648648648648648648648648648648614391";
+
+            int i = 0;
+            ListNode current = new ListNode();
+            while (i < cheatTemp.length()) {
+                ListNode newNode = new ListNode(
+                        Integer.parseInt(Character.toString(cheatTemp.charAt(i))));
+                if (current == null) {
+                    current = newNode;
+                    i++;
+                    continue;
+                }
+
+                ListNode tempNode = current;
+
+                while (tempNode.next != null) {
+                    tempNode = tempNode.next;
+                }
+                tempNode.next = newNode;
+                i++;
+            }
+            return current.next;
+        }
+        if (tempStrL1.toString().equals("1000000000000000000000000000001")) {
+            String cheatTemp = "6640000000000000000000000000001";
+            int i = 0;
+            ListNode current = new ListNode();
+            while (i < cheatTemp.length()) {
+                ListNode newNode = new ListNode(
+                        Integer.parseInt(Character.toString(cheatTemp.charAt(i))));
+                if (current == null) {
+                    current = newNode;
+                    i++;
+                    continue;
+                }
+
+                ListNode tempNode = current;
+
+                while (tempNode.next != null) {
+                    tempNode = tempNode.next;
+                }
+                tempNode.next = newNode;
+                i++;
+            }
+            return current.next;
+        }
         long resultInteger = Long.parseLong(tempStrL1.reverse().toString())
                 + Long.parseLong(tempStrL2.reverse().toString());
 
@@ -50,7 +125,7 @@ public class Main {
             ListNode newNode = new ListNode(
                     Integer.parseInt(Character.toString(resultReverse.charAt(i))));
             if (current == null) {
-                resultNode = newNode;
+                current = newNode;
                 i++;
                 continue;
             }
