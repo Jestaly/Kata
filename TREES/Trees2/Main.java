@@ -15,10 +15,68 @@ public class Main {
         }
     }
 
-    public Node root;
-    public Scanner in = new Scanner(System.in);
+    private Node root;
+    private Scanner in = new Scanner(System.in);
 
-    public void menu() {
+    private void insert(int val) {
+        root = insertNode(val, root);
+    }
+
+    private Node insertNode(int val, Node node) {
+        if (node == null) {
+            node = new Node(val);
+            return node;
+        }
+
+        if (val < node.val) {
+            node.left = insertNode(val, node.left);
+        } else if (val > node.val) {
+            node.right = insertNode(val, node.right);
+        }
+
+        return node;
+    }
+
+    private void insertMenu() {
+        int val = 0;
+        while (val != 99) {
+            System.out.print("Enter a value to Insert: ");
+            val = in.nextInt();
+
+            insert(val);
+
+            System.out.println("Value inserted.");
+
+            in.nextLine();
+            System.out.print("Press any key to Enter again otherwise Press [N]: ");
+            String choice = in.nextLine();
+
+            switch (choice.toUpperCase()) {
+                case "N":
+                    System.out.println("Returning...");
+                    return;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private Node searchNode(Node node) {
+
+        return node;
+    }
+
+    private Node deleteNode(Node node) {
+
+        return node;
+    }
+
+    private Node showTree(Node node) {
+
+        return node;
+    }
+
+    private void menu() {
         String choice = "";
         while (!choice.toUpperCase().equals("Q")) {
             System.out.println("Menu");
@@ -33,13 +91,13 @@ public class Main {
 
             switch (choice.toUpperCase()) {
                 case "S":
-
+                    showTree(root);
                     break;
                 case "I":
-
+                    insertMenu();
                     break;
                 case "D":
-
+                    deleteNode(root);
                     break;
                 case "T":
                     traverseMenu();
@@ -55,7 +113,26 @@ public class Main {
 
     }
 
-    public void traverseMenu() {
+    private void inOrderTraversal(Node node) {
+        if (node.left != null) {
+            inOrderTraversal(node.left);
+        }
+        System.out.println(node.val);
+        if (node.right != null) {
+            inOrderTraversal(node.right);
+        }
+        return;
+    }
+
+    private void preOrderTraversal(Node node) {
+
+    }
+
+    private void postOrderTraversal(Node node) {
+
+    }
+
+    private void traverseMenu() {
         int choice = 0;
         while (choice != 4) {
             System.out.println("TREE TRAVERSAL");
@@ -69,16 +146,17 @@ public class Main {
 
             switch (choice) {
                 case 1:
-
+                    inOrderTraversal(root);
                     break;
                 case 2:
-
+                    preOrderTraversal(root);
                     break;
                 case 3:
-
+                    postOrderTraversal(root);
                     break;
                 case 4:
                     System.out.println("Going back...");
+                    in.nextLine();
                     break;
                 default:
                     break;
@@ -89,6 +167,5 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         main.menu();
-
     }
 }
